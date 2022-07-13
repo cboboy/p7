@@ -1,0 +1,12 @@
+SERVER_PORT=3000
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=ici nom de votre bdd
+DB_USER=ici user de votre bdd
+DB_PASS=ici pass de votre bdd
+
+BCRYPT_SALT_ROUND=10
+
+JWT_SECRET=iciphraseSECRET
+JWT_DURING=8 hour
