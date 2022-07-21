@@ -1,22 +1,22 @@
-const express = require('express');
+const express = require("express");
 
-const userCtrl = require('../controllers/user');
-const jwtCheck = require('../middleware/jwtCheck');
+const userCtrl = require("../controllers/user");
+const jwtCheck = require("../middleware/jwtCheck");
 
 let router = express.Router();
 
-router.get('/',jwtCheck ,userCtrl.getAllUsers);
+router.get("/", userCtrl.getAllUsers);
 
-router.get('/:id',jwtCheck ,userCtrl.getUser);
+router.get("/:id", userCtrl.getUser);
 
-router.put('', userCtrl.addUser);
+router.put("", userCtrl.addUser);
 
-router.patch('/:id',jwtCheck ,userCtrl.updateUser);
+router.patch("/:id", jwtCheck, userCtrl.updateUser);
 
-router.post('/untrash/:id',jwtCheck ,userCtrl.untrashUser);
+router.post("/untrash/:id", jwtCheck, userCtrl.untrashUser);
 
-router.delete('/trash/:id',jwtCheck ,userCtrl.trashUser);
+router.delete("/trash/:id", jwtCheck, userCtrl.trashUser);
 
-router.delete('/:id',jwtCheck ,userCtrl.deleteUser);
+router.delete("/:id", jwtCheck, userCtrl.deleteUser);
 
 module.exports = router;

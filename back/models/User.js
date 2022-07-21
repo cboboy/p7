@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
             allowNull: false,
             is: /^[0-9a-f]{64}$/i    // Ici une contrainte
         }
-    }, { paranoid: true });             // softDelete
+    }, { paranoid: true });          // softDelete
 
 return User;
 }
